@@ -1,0 +1,35 @@
+nav.menu_top > ul > li > a,nav.menu_top > ul > li ul li a,nav.menu_top > ul > li ul li,nav.menu_top > ul > li,nav.menu_top > ul > li > a{-webkit-transition:all 0.25s linear; -moz-transition:all 0.25s linear; -ms-transition:all 0.25s linear; -o-transition:all 0.25s linear; transition:all 0.25s linear; }
+.menubar .container{ display:table;}
+nav.menu_top > ul { list-style-type: none; margin: 0px; padding: 0px; text-align: center; }
+nav.menu_top > ul > li { display: inline-block; padding: 0px 0px; position: relative; z-index: 9999999999; }
+/*=============== Dropdown ===================*/
+nav.menu_top > ul > li ul { visibility:hidden; list-style:outside none none; margin:0; min-width:220px; padding:0; position:absolute; top:100%; z-index: 99999999; }
+nav.menu_top > ul > li ul ul{ left:100%; top: 0px; }
+nav.menu_top > ul > li:hover > ul, nav.menu_top > ul > li ul li:hover > ul { visibility:visible; }
+nav.menu_top > ul > li ul li { display:table; padding:0; width:100%; opacity:0; position:relative; -webkit-transform:translateY(30px); -moz-transform:translateY(30px); -ms-transform:translateY(30px); -o-transform:translateY(30px); transform:translateY(30px); }
+nav.menu_top > ul li:hover > ul > li, nav.menu_top > ul > li ul li:hover > ul li { opacity:1; -webkit-transform:translateY(0); -moz-transform:translateY(0); -ms-transform:translateY(0); -o-transform:translateY(0); transform:translateY(0); }
+nav.menu_top > ul > li a {
+    display: block;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+    color: #fff;
+    padding: 12px 30px 9px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+nav.menu_top > ul > li ul li a{
+    background: #006aec;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    margin: 0px;
+    padding: 7px 0px 7px 10px!important;
+    text-transform: capitalize;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    line-height:23px;
+    display: block;
+}
+nav.menu_top > ul > li > a:after { position: absolute; content: ''; width: 1px; height: 18px; background: #1d5293; left: 100%; top: 50%; transform: translateY(-50%); }
+nav.menu_top > ul > li:last-child > a:after { display: none; }

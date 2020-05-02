@@ -1,0 +1,107 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.hd-hotline{
+    position: relative;
+    margin-left: 30px;
+    @include grid(inline-flex, $flex-wrap: null, $justify-content: null, 
+      $align-items: center, $gutter: null, $flex-direction: column);
+    padding-left: 40px;
+    img{
+        @include absolute($left: 0px, $top: 2px);
+    }
+    a{
+        @include setFont(15px, #333, 400, $font-text);
+        display: block;
+    }
+}
+.hd-diachi{
+    position: relative;
+    margin-left: 30px;
+    @include grid(inline-flex, $flex-wrap: null, $justify-content: center, 
+      $align-items: null, $gutter: null, $flex-direction: column);
+    padding-left: 50px;
+    img{
+        @include absolute($left: 0px, $top: 2px);
+    }
+    strong{
+        @include setFont(15px, $theme-color);
+        display: block;
+    }
+    span{
+        @include setFont(15px, #333, 400, $font-text);
+        display: block;
+    }
+}
+.hd-bg {
+    width: 100%;
+    z-index: 450;
+    @include relative($left: 0);
+    .hd-top{
+        border-bottom: 1px solid #dbdbdb;
+        position: relative;
+        &-flex{
+            @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+              $align-items: flex-start, $gutter: null);
+            min-height: 40px;
+            marquee{
+                margin-top: 7px;
+                @include setFont(14px, #fff, 400, $font-text);
+                margin-bottom: 0;
+                @include flex(1);
+            }
+            ul{
+                @extend %reset-list;
+                @include flex(1);
+                @include grid(flex, $flex-wrap: wrap, $justify-content: flex-end, 
+                  $align-items: center, $gutter: null);
+                height: 40px;
+                position: relative;
+                li{
+                    position: relative;
+
+                    a{
+                        @include setFont(14px, #000, 500, $font-text);
+                        text-transform: capitalize;
+                    }
+
+                    @include doubly{
+                        margin-left: 40px;
+                        @include grid(inline-flex, 
+                          $align-items: center, $gutter: null);
+                        @include p-el(before, $el-width: 1px, $el-height: 10px){
+                          background-color: #999;
+                          @include absolute($left: -20px);
+                        };
+                    };
+                }
+                @include p-el(before, $el-width: 28px, $el-height: 35px){
+                  @include bg("hd-icon.png",$background-repeat: no-repeat,$background-size: null,$background-position: 0 0);
+                  @include absolute($left: 0px, $top: 0px);
+                };
+            }
+        }
+        @include p-el(before, $el-width: 50%, $el-height: 40px){
+          background-color: $bg-header-top;
+          @include absolute($left: 0px, $top: -5px);
+        };
+    }
+    .hd-bot{
+        border-top: 1px solid #f3f3f3;
+        &-flex{
+            @include grid(flex, $flex-wrap: null, $justify-content: flex-start, 
+              $align-items: center, $gutter: null);
+            min-height: 155px;
+        }
+    }
+}
+.logo{
+    display: inline-block;
+    img{
+        height: 155px;
+        @include transition(all 0.4s ease);
+        @include when-inside('.fixed'){
+            // height: 135px;
+        }
+    }
+}

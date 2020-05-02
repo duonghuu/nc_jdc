@@ -1,0 +1,12 @@
+RewriteEngine on
+Options -Indexes
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+DirectoryIndex intro.php
+RewriteRule ^thumb/([0-9]+)x([0-9]+)/([0-9]+)/(.*)$    timthumb.php?w=$1&h=$2&zc=$3&q=95&src=http://%{HTTP_HOST}/2005/nc_jdc/$4 [L]
+RewriteRule ^admin$ admin/index.php [L]
+RewriteRule ^admin/$ admin/index.php [L]
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?com=$1 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?com=$1&page=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)&keywords=(.*)$ index.php?com=$1&keywords=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)&lang=([a-zA-Z0-9_-]+)$ index.php?com=$1&lang=$2 [L]
