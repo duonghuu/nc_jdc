@@ -128,5 +128,7 @@
 @define ('_lienhe','Liên hệ');
 @define ('_tintuc','Tin tức');
 @define ('_gioithieu','Giới thiệu');
+@define ('_hoidong','Hội đồng quản trị');
+@define ('_docthem','Đọc thêm');
 @define ('_trangchu','Trang chủ');
 ?>

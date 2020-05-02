@@ -19,3 +19,4 @@
 <?php } ?>
 
 <link href="js/vortex/css/vortex.min.css" rel="stylesheet">
+<link href="main.css?v=1.0" rel="stylesheet" type="text/css"/>

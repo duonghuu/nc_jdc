@@ -3,7 +3,7 @@
 @import "variable"; 
 
 /* ======================== FONTS ======================== */
-@import "fonts";
+// @import "fonts";
 
 // 1. Configuration and helpers
 @import 'abstracts/main';
@@ -15,13 +15,13 @@
 @import 'base/main';
 
 // 4. Layout-related sections
-@import 'layout/main';
+// @import 'layout/main';
 
 // 5. Components
-@import 'components/main';
+// @import 'components/main';
 
 // 6. Page-specific styles
-@import 'pages/main';
+// @import 'pages/main';
 
 // 7. Mobile
 // @import 'devices/main';
