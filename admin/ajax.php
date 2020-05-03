@@ -32,9 +32,7 @@
 			if($d->num_rows() == 1){
 				$row = $d->fetch_array();
 
-				// if($row['password'] == $password){
-				if(1){
-
+				if($row['password'] == $password){
 					$_SESSION[$login_name] = true;
 					$_SESSION['login']['role'] = $row['role'];
 					$_SESSION['login']['quyen'] = $row['quyen'];

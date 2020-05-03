@@ -15,6 +15,7 @@
         position: relative;
         overflow: hidden;
         border: 5px solid $theme-color;
+        margin: 0 auto 10px;
         img{
           @extend %img-fill;
           object-fit: cover;
@@ -25,9 +26,7 @@
         @include setFont(15px, #000, 700);
         text-transform: uppercase;
         margin-bottom: 7px;
-        @include doubly(){
-
-        };
+        @include transition(all 0.2s ease);
       }
       .hoidong__line{
         border-top: 5px solid $theme-color;
@@ -42,8 +41,20 @@
         @include setFont(13px, #fff, 700);
         text-transform: capitalize;
         background-color: $theme-color;
+        border: 2px solid $theme-color;
         padding: 3px 20px;
         display: inline-block;
+        @include transition(all 0.2s ease);
+        
+      }
+      @include on-event(){
+        h5{
+          color: $theme-color;
+        }
+        .hoidong__read{
+          background-color: #fff;
+          color: $theme-color;
+        }
       }
     }
     &:nth-child(1){
@@ -57,5 +68,76 @@
     &:nth-child(-n+2){
       width: 50%;
     }
+  }
+}
+.hero-img {
+
+  /* Set a specific height */
+  height: 260px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @include grid(flex, $flex-wrap: wrap, $justify-content: center, 
+    $align-items: center, $gutter: null);
+  .hero-title{
+    @include setFont(34px, #fff, 700);
+    text-transform: uppercase;
+  }
+}
+.hoidong-detail-head{
+  @include grid(flex, $flex-wrap: wrap, $justify-content: null, 
+    $align-items: center, $gutter: null);
+  padding: 40px 0;
+  position: relative;
+  margin-bottom: 30px;
+  figure{
+    @include box(250px, 250px, 100%);
+    border: 5px solid $theme-color;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    img{
+      @extend %img-fill;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+  &__info{
+    margin-left: 50px;
+    max-width: 400px;
+    h2{
+      margin-bottom: 1em;
+      @include setFont(16px, #000, 700);
+    }
+    .desc{
+      @include setFont(16px, #000, 400);
+    }
+  }
+  @include p-el(after, $el-width: 60px, $el-height: 10px){
+    @include absolute($left: 0px, $bottom: 0px);
+    background-color: #333;
+  };
+}
+.hoidong-detail-body{
+  @include setFont(16px, #000, 400);
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.hoidong-detail-foot{
+  a{
+    display: inline-block;
+    border: 2px solid #333;
+    border-radius: 20px;
+    padding: 7px 30px;
+    @include setFont(15px, #333, 400);
+    @include transition(all 0.2s ease);
+    @include on-event(){
+      color: #fff;
+      background-color: #333;
+    };
   }
 }

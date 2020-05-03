@@ -130,5 +130,6 @@
 @define ('_gioithieu','Introduce');
 @define ('_hoidong','Administrative Council');
 @define ('_docthem','Read more');
+@define ('_quaylai','Previous Page');
 @define ('_trangchu','Home');
 ?>

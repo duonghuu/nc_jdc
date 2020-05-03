@@ -20,11 +20,14 @@
 	    </ul>
 	</li>
 
-	<li class="categories_li <?php if($_GET['com']=='baiviet' && $_GET['type']=='hoidong') echo ' activemenu' ?>" id="menu_2hd">
+	<li class="categories_li <?php if($_GET['type']=='bannerhd' || $_GET['type']=='hoidong') 
+	echo ' activemenu' ?>" id="menu_2hd">
 		<a href="" title="" class="exp"><span>Hội đồng quản trị</span><strong></strong></a>
 	    <ul class="sub">
 	      	<li <?php if($_GET['act']=='man' && $_GET['type']=='hoidong') echo ' class="this"' ?>>
 	      		<a href="index.php?com=baiviet&act=man&type=hoidong">Hội đồng quản trị</a></li>
+	      	<li <?php if($_GET['type']=='banner') echo ' class="this"' ?>><a 
+	      		href="index.php?com=bannerqc&act=capnhat&type=bannerhd" title="">Banner Hội đồng quản trị</a></li>
 	    </ul>
 	</li>
 

@@ -50,7 +50,8 @@
             	include _template."layout/nivo_slider.php"; ?>
         </header>
         <section>
-            <?php if($template != 'index') { include _template."layout/breadcrumb.php"; } ?>
+            <?php if( !in_array($template, ['index','hoidong','hoidong_detail'])) { 
+                include _template."layout/breadcrumb.php"; } ?>
             <?php include _template.$template."_tpl.php"; ?>
         </section>
         <footer>

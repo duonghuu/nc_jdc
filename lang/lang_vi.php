@@ -130,5 +130,6 @@
 @define ('_gioithieu','Giới thiệu');
 @define ('_hoidong','Hội đồng quản trị');
 @define ('_docthem','Đọc thêm');
+@define ('_quaylai','Quay lại');
 @define ('_trangchu','Trang chủ');
 ?>

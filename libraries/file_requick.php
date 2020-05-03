@@ -72,7 +72,7 @@
 			break;
 		case 'hoi-dong':
 			$source = "news";
-			$template = isset($_GET['id']) ? "news_detail" : "hoidong";
+			$template = isset($_GET['id']) ? "hoidong_detail" : "hoidong";
 			$type_bar = 'hoidong';
 			$title_detail = _hoidong;
 			break;

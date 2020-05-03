@@ -7687,7 +7687,7 @@ body.compensate-for-scrollbar {
 .slick-slider:hover .slick-prev, .slick-slider:hover .slick-next {
   opacity: 1; }
 
-.hoidong-flex .hoidong-item a figure img {
+.hoidong-flex .hoidong-item a figure img, .hoidong-detail-head figure img {
   position: absolute;
   top: 0;
   right: 0;
@@ -7696,6 +7696,10 @@ body.compensate-for-scrollbar {
   width: 100%;
   height: 100%;
   object-fit: fill; }
+
+.hoidong-detail-head:after {
+  content: '';
+  position: absolute; }
 
 .hoidong-flex {
   box-sizing: border-box;
@@ -7719,7 +7723,8 @@ body.compensate-for-scrollbar {
         border-radius: 100%;
         position: relative;
         overflow: hidden;
-        border: 5px solid #006aec; }
+        border: 5px solid #006aec;
+        margin: 0 auto 10px; }
         .hoidong-flex .hoidong-item a figure img {
           object-fit: cover;
           object-position: center top; }
@@ -7728,7 +7733,12 @@ body.compensate-for-scrollbar {
         font-size: 15px;
         font-weight: 700;
         text-transform: uppercase;
-        margin-bottom: 7px; }
+        margin-bottom: 7px;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
       .hoidong-flex .hoidong-item a .hoidong__line {
         border-top: 5px solid #006aec;
         display: block;
@@ -7744,8 +7754,19 @@ body.compensate-for-scrollbar {
         font-weight: 700;
         text-transform: capitalize;
         background-color: #006aec;
+        border: 2px solid #006aec;
         padding: 3px 20px;
-        display: inline-block; }
+        display: inline-block;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
+      .hoidong-flex .hoidong-item a:hover h5, .hoidong-flex .hoidong-item a:active h5, .hoidong-flex .hoidong-item a:focus h5 {
+        color: #006aec; }
+      .hoidong-flex .hoidong-item a:hover .hoidong__read, .hoidong-flex .hoidong-item a:active .hoidong__read, .hoidong-flex .hoidong-item a:focus .hoidong__read {
+        background-color: #fff;
+        color: #006aec; }
     .hoidong-flex .hoidong-item:nth-child(1) {
       -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -7762,5 +7783,88 @@ body.compensate-for-scrollbar {
       justify-content: flex-start; }
     .hoidong-flex .hoidong-item:nth-child(-n+2) {
       width: 50%; }
+
+.hero-img {
+  /* Set a specific height */
+  height: 260px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  .hero-img .hero-title {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+.hoidong-detail-head {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+  margin-bottom: 30px; }
+  .hoidong-detail-head figure {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 5px solid #006aec;
+    position: relative;
+    overflow: hidden;
+    margin: 0; }
+    .hoidong-detail-head figure img {
+      object-fit: cover;
+      object-position: top center; }
+  .hoidong-detail-head__info {
+    margin-left: 50px;
+    max-width: 400px; }
+    .hoidong-detail-head__info h2 {
+      margin-bottom: 1em;
+      color: #000;
+      font-size: 16px;
+      font-weight: 700; }
+    .hoidong-detail-head__info .desc {
+      color: #000;
+      font-size: 16px;
+      font-weight: 400; }
+  .hoidong-detail-head:after {
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: #333; }
+
+.hoidong-detail-body {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 30px; }
+
+.hoidong-detail-foot a {
+  display: inline-block;
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 7px 30px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .hoidong-detail-foot a:hover, .hoidong-detail-foot a:active, .hoidong-detail-foot a:focus {
+    color: #fff;
+    background-color: #333; }
 
 /*# sourceMappingURL=main.css.map */

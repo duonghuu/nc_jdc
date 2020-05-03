@@ -15,7 +15,7 @@
                     
                     $str='';
                     $str.='<ul>';
-                    $str.='<li><a href="hoi-dong" title="Hội đồng quản trị">Hội đồng quản trị</a></li>';
+                    $str.='<li><a href="hoi-dong" title="HỘI ĐỒNG QUẢN TRỊ">HỘI ĐỒNG QUẢN TRỊ</a></li>';
                     foreach ($danhmuc_cap1 as $key_list => $value_list) {
                         $str.='<li><a href="'.$value_list["tenkhongdau"].'" title="'.$value_list["ten"].'">'.$value_list["ten"].'</a></li>';
                     }

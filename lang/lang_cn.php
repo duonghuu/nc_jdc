@@ -130,5 +130,6 @@
 @define ('_gioithieu','介绍');
 @define ('_hoidong','Hội đồng quản trị');
 @define ('_docthem','Read more');
+@define ('_quaylai','Previous Page');
 @define ('_trangchu','家');
 ?>

@@ -88,7 +88,7 @@
 						$config_tieude = "true";
 						$config_mota= "true";
 						$config_noidung = "true";
-						$config_noibat = "true";
+						$config_noibat = "false";
 						@define ( _width_thumb , 300 );
 						@define ( _height_thumb , 300 );
 						@define ( _style_thumb , 1 );
@@ -205,6 +205,14 @@
 			break;
 		case 'lienhe':
 			$title_main = 'Liên hệ';
+			break;
+		case 'bannerhd':
+			$title_main = 'Banner Hội đồng quản trị';
+			@define ( _width_thumb , 1366 );
+			@define ( _height_thumb , 260 );
+			@define ( _style_thumb , 1 );
+			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF|swf' );
+			$ratio_ = 1;
 			break;
 		case 'banner':
 			$title_main = 'Banner';
